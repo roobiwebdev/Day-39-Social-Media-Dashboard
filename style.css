@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(230, 17%, 14%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in 0.25s;
+}
+.body-dark {
+  background-color: hsl(230, 17%, 14%);
+}
+.container {
+  width: 78%;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 0;
+  padding-bottom: 2.9em;
+}
+nav .nav-title {
+  font-size: 1.8rem;
+  color: hsl(230, 17%, 14%);
+}
+
+nav .nav-titleDark {
+  color: #fff;
+}
+
+nav .theme-text,
+nav .ttl-follower {
+  font-size: 14px;
+  font-weight: bold;
+  color: hsl(228, 12%, 44%);
+  margin-top: 0px;
+}
+
+.darkthemes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: -6px;
+}
+
+.switch {
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin: 0 10px;
+  position: relative;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider::before {
+  content: "";
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 28px;
+  bottom: 3.5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+input:checked + .slider {
+  background-image: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+}
+
+input:checked + .slider::before {
+  transform: translateX(-24px);
+  background-color: hsl(230, 17%, 14%);
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+}
+
+.card {
+  background-color: hsl(227, 47%, 96%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.8em 4em;
+  max-width: 255px;
+  min-width: 100%;
+  border-top: 4px solid hsl(348, 97%, 39%);
+  border-radius: 5px;
+  transition: all 0.1s ease-in-out;
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: hsl(227, 16%, 89%);
+}
+
+.cardinDark {
+  background-color: hsl(228, 28%, 20%);
+}
+
+.cardinDark:hover{
+  background-color: hsl(228, 22%, 27%);
+
+}
+
+.icon {
+  display: flex;
+}
+.icon .username {
+  color: hsl(228, 12%, 44%);
+  margin-left: 10%;
+  font-size: 13px;
+}
+
+.card .followerNum {
+  font-size: 3.7rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.card .followerNum-Dark {
+  color: white;
+}
+
+.card .followerTxt {
+  font-size: 16px;
+  letter-spacing: 5px;
+  text-align: center;
+  color: hsl(228, 12%, 44%);
+}
+
+.card .date {
+  color: hsl(163, 72%, 41%);
+
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.85em;
+}
+
+.down {
+  color: hsl(356, 69%, 56%);
+}
+
+.card-1 {
+  border-top: 4px solid hsl(208, 92%, 53%);
+}
+.card-2 {
+  border-top: 4px solid hsl(203, 89%, 53%);
+}
+
+.card-4 {
+  border-top: 4px solid hsl(348, 97%, 39%);
+}
+
+.card .followerNum {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+/*  */
+
+.title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: hsl(228, 12%, 44%);
+  margin: 1.2em 0;
+  margin-top: 1.3em;
+}
+
+.title-Dark {
+  color: white;
+}
+
+.contents {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  gap: 1.9em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(227, 47%, 96%);
+  gap: 1.3em;
+  padding: 1.3em 1.6em;
+  border-radius: 5px;
+  transition: all 0.1s ease-in-out;
+}
+
+.content:hover {
+  cursor: pointer;
+  background-color: hsl(227, 16%, 89%);
+}
+
+.content-Dark {
+  background-color: hsl(228, 28%, 20%);
+}
+
+.content-Dark:hover {
+  background-color: hsl(228, 22%, 27%);
+
+}
+
+.viewTxt {
+  font-size: 15px;
+  font-weight: bold;
+  color: hsl(228, 12%, 44%);
+}
+
+.viewsNum {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.viewsNum-Dark {
+  color: white;
+}
+.page-viewNum,
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.res {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.res p {
+  color: hsl(163, 72%, 41%);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.res .down {
+  color: hsl(356, 69%, 56%);
+}
+
+/*  */
+
+@media screen and (width<=80em) {
+  body {
+    height: 100vh;
+  }
+  .container {
+    width: 95%;
+  }
+  @media screen and (width<760px) {
+    body {
+      height: auto;
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+    }
+    nav .nav-title {
+      font-size: 1.65rem;
+      font-weight: bold;
+    }
+    .darkthemes {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.6em;
+      
+    }
+    nav .theme-text {
+      font-size: 1em;
+    }
+    header {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 2em;
+    }
+
+    .contents {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+
+      gap: 1.9em;
+      margin-bottom: 2.3em;
+    }
+  }
+}
